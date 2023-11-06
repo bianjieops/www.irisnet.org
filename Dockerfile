@@ -7,7 +7,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
     yarn install --registry http://registry.npmmirror.com  && \
     yarn build
 
-FROM nginx:1.24-alpine
+FROM nginx:stable-alpine3.17
 RUN echo -e 'server {\n\
     root   /usr/share/nginx/html;\n\
     location / {\n\
